@@ -1,4 +1,4 @@
-package br.com.cravoecanela.plataforma;
+package br.com.xpto.plataforma;
 
 import org.junit.jupiter.api.Test;
 import org.springframework.boot.test.context.SpringBootTest;
