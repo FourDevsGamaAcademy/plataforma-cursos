@@ -21,20 +21,24 @@ public class Aluno {
     @Column(name = "cpf", length = 15, unique = true, nullable = false)
     private String cpf;
 
-    @Column(name = "data_nasc", nullable = false)
+    @Column(name = "data_nasc")
     private LocalDate dataNasc;
 
-    @Column(name = "genero", nullable = false)
+    @Column(columnDefinition = "enum('FEMININO','MASCULINO')")
+    @Enumerated(EnumType.STRING)
     private Genero genero;
 
-    @Column(name = "celular", length = 15, nullable = false)
+    @Column(name = "celular", length = 20, nullable = false)
     private String celular;
 
-    @Column(name = "telefone", length = 14)
+    @Column(name = "telefone", length = 20)
     private String telefone;
 
     @Column(name = "email", length = 45, unique = true, nullable = false)
     private String email;
+
+    @Column(name = "endereco", length = 120, nullable = false)
+    private String endereco;
 
     public Integer getAlunoId() {
         return alunoId;
@@ -43,34 +47,6 @@ public class Aluno {
     public void setAlunoId(Integer alunoId) {
         this.alunoId = alunoId;
     }
-
-    public Genero getGenero() {
-        return genero;
-    }
-
-    public void setGenero(Genero genero) {
-        this.genero = genero;
-    }
-
-    public String getCelular() {
-        return celular;
-    }
-
-    public void setCelular(String celular) {
-        this.celular = celular;
-    }
-
-    public String getTelefone() {
-        return telefone;
-    }
-
-    public void setTelefone(String telefone) {
-        this.telefone = telefone;
-    }
-
-    @Column(name = "endereco", length = 120, nullable = false)
-
-
 
     public String getNome() {
         return nome;
@@ -104,11 +80,43 @@ public class Aluno {
         this.dataNasc = dataNasc;
     }
 
+    public Genero getGenero() {
+        return genero;
+    }
+
+    public void setGenero(Genero genero) {
+        this.genero = genero;
+    }
+
+    public String getCelular() {
+        return celular;
+    }
+
+    public void setCelular(String celular) {
+        this.celular = celular;
+    }
+
+    public String getTelefone() {
+        return telefone;
+    }
+
+    public void setTelefone(String telefone) {
+        this.telefone = telefone;
+    }
+
     public String getEmail() {
         return email;
     }
 
     public void setEmail(String email) {
         this.email = email;
+    }
+
+    public String getEndereco() {
+        return endereco;
+    }
+
+    public void setEndereco(String endereco) {
+        this.endereco = endereco;
     }
 }
