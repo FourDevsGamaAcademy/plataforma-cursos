@@ -7,7 +7,7 @@ import org.springframework.stereotype.Service;
 import br.com.xpto.plataforma.dao.CursoDAO;
 import br.com.xpto.plataforma.model.Curso;
 
-@Service
+@Service("CursoImpl")
 public class CursoServiceImpl implements ICursoService{
 	@Autowired
 	private CursoDAO dao;

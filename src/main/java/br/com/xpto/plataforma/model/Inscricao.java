@@ -11,18 +11,26 @@ public class Inscricao {
     @Column(name = "inscricao_id")
     private Integer inscricaoId;
 
-    @ManyToOne
-    @JoinColumn(name = "aluno_id")
-    private Aluno aluno;
+	/*
+	 * @ManyToOne
+	 * 
+	 * @JoinColumn(name = "aluno_id") private Aluno aluno;
+	 */
 
-    @ManyToOne
-    @JoinColumn(name = "curso_id")
-    private Curso curso;
+	/*
+	 * @ManyToOne
+	 * 
+	 * @JoinColumn(name = "curso_id") private Curso curso;
+	 */
+    
+	@Column(name = "aluno_id")
+    private Integer alunoId;
+    @Column (name = "curso_id")
+    private Integer cursoId;
 
-    @Column(name = "empresa", length = 30, nullable = false)
-    private String empresa;
-
-    @Column(name = "status")
+    
+    @Column(name = "status_inscricao")
+    @Enumerated(EnumType.STRING)
     private StatusInscricao statusInscricao;
 
     @Column(name = "data_aplicacao")
@@ -36,21 +44,11 @@ public class Inscricao {
         this.inscricaoId = inscricaoId;
     }
 
-    public Aluno getAluno() {
-        return aluno;
-    }
-
-    public void setAluno(Aluno aluno) {
-        this.aluno = aluno;
-    }
-
-    public String getEmpresa() {
-        return empresa;
-    }
-
-    public void setEmpresa(String empresa) {
-        this.empresa = empresa;
-    }
+	/*
+	 * public Aluno getAluno() { return aluno; }
+	 * 
+	 * public void setAluno(Aluno aluno) { this.aluno = aluno; }
+	 */
 
     public StatusInscricao getStatusInscricao() {
         return statusInscricao;
@@ -68,11 +66,25 @@ public class Inscricao {
         this.dataAplicacao = dataAplicacao;
     }
 
-    public Curso getCurso() {
-        return curso;
-    }
+	/*
+	 * public Curso getCurso() { return curso; }
+	 * 
+	 * public void setCurso(Curso curso) { this.curso = curso; }
+	 */
+    
+    public Integer getAlunoId() {
+		return alunoId;
+	}
 
-    public void setCurso(Curso curso) {
-        this.curso = curso;
-    }
+	public void setAlunoId(Integer alunoId) {
+		this.alunoId = alunoId;
+	}
+	
+	public Integer getCursoId() {
+		return cursoId;
+	}
+
+	public void setCursoId(Integer cursoId) {
+		this.cursoId = cursoId;
+	}
 }
