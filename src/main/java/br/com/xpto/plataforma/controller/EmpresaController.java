@@ -41,6 +41,16 @@ public class EmpresaController {
         }
     }
 
+    @GetMapping("/empresa/{id}")
+    public ResponseEntity<Empresa> buscarPorId(@PathVariable Integer id){
+        Empresa resultado = service.buscarPeloId(id);
+       if(resultado != null){
+           return ResponseEntity.ok(resultado);
+       } else {
+           return null;
+       }
+    }
+
     /*@DeleteMapping("empresa/{id}")
     public ResponseEntity<Empresa> excluirEmpresa(@PathVariable Integer id) {
         service.excluirEmpresa(id);
