@@ -1,5 +1,4 @@
 package br.com.xpto.plataforma.model;
-
 import javax.persistence.*;
 import java.time.LocalDate;
 
@@ -7,15 +6,21 @@ import java.time.LocalDate;
 @Table(name = "curso")
 public class Curso {
 
-    @Id
+	@Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     @Column(name = "curso_id", nullable = false)
     private Integer cursoId;
 
-    @ManyToOne
-    @JoinColumn(name = "empresa_id")
-    private Empresa empresa;
+	/* Tirar comentario para integracao
+	 * @ManyToOne
+	 * 
+	 * @JoinColumn(name = "empresa_id") private Empresa empresa;
+	 */
 
+    //Tirar esse bloco ao conectar com a api da empresa
+    @Column(name = "empresa_id", nullable = false)
+    private Integer empresaId; 
+    
     @Column(name = "nome", length = 45, nullable = false)
     private String nome;
 
@@ -34,14 +39,17 @@ public class Curso {
     @Column(name = "data_fim")
     private LocalDate dataFim;
 
-    @Column(name = "incio_inscricao")
-    private LocalDate inicioInscricao;
+	 @Column(name = "inicio_inscricao") 
+	 private LocalDate inicioInscricao;
+	 
 
     @Column(name = "fim_inscricao")
     private LocalDate fimInscricao;
 
-    @Column(name = "status")
-    private StatusCurso statusCurso;
+	@Column(name = "status_curso") 
+	@Enumerated(EnumType.STRING)
+	private StatusCurso status_curso;
+	
 
     public Integer getCargaHoraria() {
         return cargaHoraria;
@@ -51,14 +59,22 @@ public class Curso {
         this.cargaHoraria = cargaHoraria;
     }
 
-    public Empresa getEmpresa() {
-        return empresa;
-    }
+	/* Tirar comentario
+	 * public Empresa getEmpresa() { return empresa; }
+	 * 
+	 * public void setEmpresa(Empresa empresa) { this.empresa = empresa; }
+	 */
+    
+    //apagar a partir daqui
+    public Integer getEmpresaId() {
+		return empresaId;
+	}
 
-    public void setEmpresa(Empresa empresa) {
-        this.empresa = empresa;
-    }
-
+	public void setEmpresaId(Integer empresaId) {
+		this.empresaId = empresaId;
+	}
+	//apagar ate aqui
+	
     public String getDescricao() {
         return descricao;
     }
@@ -91,13 +107,12 @@ public class Curso {
         this.dataFim = dataFim;
     }
 
-    public LocalDate getInicioInscricao() {
-        return inicioInscricao;
-    }
-
-    public void setInicioInscricao(LocalDate inicioInscricao) {
-        this.inicioInscricao = inicioInscricao;
-    }
+	
+	  public LocalDate getInicioInscricao() { return inicioInscricao; }
+	  
+	  public void setInicioInscricao(LocalDate inicioInscricao) {
+	  this.inicioInscricao = inicioInscricao; }
+	 
 
     public LocalDate getFimInscricao() {
         return fimInscricao;
@@ -105,17 +120,17 @@ public class Curso {
 
     public void setFimInscricao(LocalDate fimInscricao) {
         this.fimInscricao = fimInscricao;
-    }
+    }	 
 
-    public StatusCurso getStatusCurso() {
-        return statusCurso;
-    }
+    public StatusCurso getStatus_curso() {
+		return status_curso;
+	}
 
-    public void setStatusCurso(StatusCurso statusCurso) {
-        this.statusCurso = statusCurso;
-    }
+	public void setStatus_curso(StatusCurso status_curso) {
+		this.status_curso = status_curso;
+	}
 
-    public Integer getCursoId() {
+	public Integer getCursoId() {
         return cursoId;
     }
 
