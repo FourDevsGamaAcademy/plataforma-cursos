@@ -1,13 +1,11 @@
 package br.com.xpto.plataforma.controller;
 
-import br.com.xpto.plataforma.dao.EmpresaDAO;
 import br.com.xpto.plataforma.model.Empresa;
 import br.com.xpto.plataforma.service.IEmpresaService;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.PostMapping;
-import org.springframework.web.bind.annotation.RequestBody;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.http.ResponseEntity;
+import org.springframework.stereotype.Service;
+import org.springframework.web.bind.annotation.*;
 
 import java.util.ArrayList;
 
@@ -23,9 +21,31 @@ public class EmpresaController {
     }
 
     @PostMapping("/empresa")
-    public Empresa incluirNova(@RequestBody Empresa nova) {
-      return service.criarNova(nova);
+    public ResponseEntity<Empresa> incluirNova(@RequestBody Empresa nova){
+        Empresa resultado = service.criarNova(nova);
+        if (resultado != null){
+            return ResponseEntity.ok(resultado);
+        }
+        else {
+           return ResponseEntity.badRequest().build();
+        }
     }
+
+    @PutMapping("/empresa")
+    public ResponseEntity<Empresa> alterar(@RequestBody Empresa dados){
+        Empresa resultado = service.atualizarDados(dados);
+        if (resultado != null){
+            return ResponseEntity.ok(resultado);
+        }else {
+            return ResponseEntity.badRequest().build();
+        }
+    }
+
+    /*@DeleteMapping("empresa/{id}")
+    public ResponseEntity<Empresa> excluirEmpresa(@PathVariable Integer id) {
+        service.excluirEmpresa(id);
+        return null;
+    }*/
 }
 
 

@@ -17,5 +17,5 @@ public interface IEmpresaService {
 
     public Empresa buscarPeloNome(String nome);
 
-    public void excluirEmpresa(Integer id);
+   // public void excluirEmpresa(Integer id);
 }

@@ -23,6 +23,11 @@ public class EmpresaServiceImpl implements IEmpresaService {
 
     @Override
     public Empresa atualizarDados(Empresa dados) {
+        if(dados.getEmpresaId()!=null && dados.getNome() != null && dados.getCnpj() != null
+                && dados.getEndereco() != null && dados.getResponsavel() != null
+                && dados.getEmail() != null && dados.getTelefone() != null){
+            return dao.save(dados);
+        }
         return null;
     }
 
@@ -33,7 +38,7 @@ public class EmpresaServiceImpl implements IEmpresaService {
 
     @Override
     public Empresa buscarPeloId(Integer id) {
-        return null;
+        return dao.findById(id).orElse(null);
     }
 
     @Override
@@ -41,8 +46,8 @@ public class EmpresaServiceImpl implements IEmpresaService {
         return null;
     }
 
-    @Override
+   /* @Override
     public void excluirEmpresa(Integer id) {
         dao.deleteById(id);
-    }
+    }*/
 }
