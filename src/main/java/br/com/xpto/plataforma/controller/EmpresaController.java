@@ -2,8 +2,11 @@ package br.com.xpto.plataforma.controller;
 
 import br.com.xpto.plataforma.dao.EmpresaDAO;
 import br.com.xpto.plataforma.model.Empresa;
+import br.com.xpto.plataforma.service.IEmpresaService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.PostMapping;
+import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RestController;
 
 import java.util.ArrayList;
@@ -12,14 +15,18 @@ import java.util.ArrayList;
 public class EmpresaController {
 
     @Autowired
-  private EmpresaDAO dao;
+    private IEmpresaService service;
 
-    @GetMapping("/empresa")
-    public ArrayList<Empresa> recuperarTodas(){
-        ArrayList<Empresa> lista;
-        lista = (ArrayList<Empresa>) dao.findAll();
-        return  lista;
+    @GetMapping("/empresas")
+    public ArrayList<Empresa> recuperarTodas() {
+        return service.buscarTodas();
     }
 
-
+    @PostMapping("/empresa")
+    public Empresa incluirNova(@RequestBody Empresa nova) {
+      return service.criarNova(nova);
+    }
 }
+
+
+
