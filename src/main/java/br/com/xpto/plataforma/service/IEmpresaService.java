@@ -11,15 +11,15 @@ import java.util.ArrayList;
 
 public interface IEmpresaService {
 
-    public Empresa criarNova(Empresa nova);
+    Empresa criarNova(Empresa nova);
 
-    public Empresa atualizarDados(Empresa dados);
+    Empresa atualizarDados(Empresa dados);
 
-    public ArrayList<Empresa> buscarTodas();
+    ArrayList<Empresa> buscarTodas();
 
-    public Empresa buscarPeloId(Integer id);
+    Empresa buscarPeloId(Integer id);
 
-    public Empresa buscarPorNome(String nome);
+    Empresa buscarPorNome(String nome);
 
-    public void excluirEmpresa(Integer id);
+    void excluirEmpresa(Integer id);
 }

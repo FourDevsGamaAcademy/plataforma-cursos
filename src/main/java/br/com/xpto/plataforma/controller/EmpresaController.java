@@ -14,7 +14,7 @@ public class EmpresaController {
     @Autowired
     private IEmpresaService service;
 
-    @GetMapping("/empresas")
+    @GetMapping("/empresa")
     public ArrayList<Empresa> recuperarTodas() {
         return service.buscarTodas();
     }
@@ -50,7 +50,7 @@ public class EmpresaController {
        }
     }
 
-    @DeleteMapping("empresa/{id}")
+    @DeleteMapping("/empresa/{id}")
     public ResponseEntity<Empresa> excluirEmpresa(@PathVariable Integer id) {
         service.excluirEmpresa(id);
         return null;
