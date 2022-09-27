@@ -39,9 +39,8 @@ public class Curso {
     @Column(name = "data_fim")
     private LocalDate dataFim;
 
-	 @Column(name = "inicio_inscricao") 
-	 private LocalDate inicioInscricao;
-	 
+	@Column(name = "inicio_inscricao") 
+	private LocalDate inicioInscricao; 
 
     @Column(name = "fim_inscricao")
     private LocalDate fimInscricao;

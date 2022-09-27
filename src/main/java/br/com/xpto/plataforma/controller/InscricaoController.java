@@ -13,26 +13,26 @@ import org.springframework.web.bind.annotation.PutMapping;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RestController;
 
-import br.com.xpto.plataforma.model.Curso;
-import br.com.xpto.plataforma.service.ICursoService;
+import br.com.xpto.plataforma.model.Inscricao;
+import br.com.xpto.plataforma.service.IInscricaoService;
 
 @RestController
-public class CursoController {
+public class InscricaoController {
 	@Autowired
-	@Qualifier("CursoImpl")
-	private ICursoService service;
+	@Qualifier("InscricaoServiceImpl")
+	private IInscricaoService service;
 	
 	//recuperar todos
 	
-	@GetMapping("/cursos") 
-	public ArrayList<Curso> recuperarTodoMundo(){ 
-		return service.recuperarTodos(); 
+	@GetMapping("/inscricoes") 
+	public ArrayList<Inscricao> recuperarTodoMundo(){ 
+		return service.recuperarTodas(); 
 	}
 
 	//recuperar pelo ID
-	@GetMapping("/cursos/{codigo}")
-	public ResponseEntity<Curso> recuperarPeloId(@PathVariable Integer codigo){
-		Curso res = service.recuperarPeloId(codigo);
+	@GetMapping("/inscricoes/{codigo}")
+	public ResponseEntity<Inscricao> recuperarPeloId(@PathVariable Integer codigo){
+		Inscricao res = service.recuperarPeloId(codigo);
 		if (res != null) {
 			return ResponseEntity.ok(res);
 		}
@@ -40,28 +40,28 @@ public class CursoController {
 	}
 		
 	//cadastrar
-	@PostMapping("/cursos")
-	public ResponseEntity<Curso> inserirNovoCurso(@RequestBody Curso novo){
-		Curso res = service.cadastrarNovo(novo);
+	@PostMapping("/inscricoes")
+	public ResponseEntity<Inscricao> inserirNovoCurso(@RequestBody Inscricao novo){
+		Inscricao res = service.cadastrarNovo(novo);
 		if (res != null) {
 			return ResponseEntity.ok(res);
 			}
 		return ResponseEntity.badRequest().build();
 	}
 	//excluir
-	@DeleteMapping("/cursos/{id}")
-	public ResponseEntity<Curso> excluirCurso(@PathVariable Integer id){
-		service.excluirCurso(id);
+	@DeleteMapping("/inscricao/{id}")
+	public ResponseEntity<Inscricao> excluirInscricao(@PathVariable Integer id){
+		service.excluirInscricao(id);
 		return ResponseEntity.ok(null);
 	}
 	
-	@PutMapping("cursos")
-	public ResponseEntity<Curso> atualizarStatusCurso(@RequestBody Curso status){
-		Curso res = service.atualizarStatusCurso(status);
+	@PutMapping("inscricao")
+	public ResponseEntity<Inscricao> atualizarStatusInscricao(@RequestBody Inscricao status){
+		Inscricao res = service.atualizarStatusInscricao(status);
 		if (res != null) {
 			return ResponseEntity.ok(res);
 		}
 		return ResponseEntity.badRequest().build();
 	}
-	
+
 }
