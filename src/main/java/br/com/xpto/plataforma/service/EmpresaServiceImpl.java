@@ -6,6 +6,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 import java.util.ArrayList;
+import java.util.List;
 
 @Service
 public class EmpresaServiceImpl implements IEmpresaService {
@@ -42,12 +43,9 @@ public class EmpresaServiceImpl implements IEmpresaService {
     }
 
     @Override
-    public Empresa buscarPeloNome(String nome) {
+    public Empresa buscarPorNome(String nome) {
         return null;
     }
 
-   /* @Override
-    public void excluirEmpresa(Integer id) {
-        dao.deleteById(id);
-    }*/
+
 }

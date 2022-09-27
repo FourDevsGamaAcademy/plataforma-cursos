@@ -4,7 +4,6 @@ import br.com.xpto.plataforma.model.Empresa;
 import br.com.xpto.plataforma.service.IEmpresaService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.ResponseEntity;
-import org.springframework.stereotype.Service;
 import org.springframework.web.bind.annotation.*;
 
 import java.util.ArrayList;
@@ -50,12 +49,6 @@ public class EmpresaController {
            return null;
        }
     }
-
-    /*@DeleteMapping("empresa/{id}")
-    public ResponseEntity<Empresa> excluirEmpresa(@PathVariable Integer id) {
-        service.excluirEmpresa(id);
-        return null;
-    }*/
 }
 
 
