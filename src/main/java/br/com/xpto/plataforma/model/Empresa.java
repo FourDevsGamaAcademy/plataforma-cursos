@@ -3,7 +3,7 @@ package br.com.xpto.plataforma.model;
 import javax.persistence.*;
 
 @Entity
-@Table(name = "empresas")
+@Table(name = "empresa")
 public class Empresa {
 
     @Id
