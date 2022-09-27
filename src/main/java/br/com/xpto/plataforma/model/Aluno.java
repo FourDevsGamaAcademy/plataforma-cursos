@@ -1,7 +1,10 @@
 package br.com.xpto.plataforma.model;
 
+import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
+
 import javax.persistence.*;
 import java.time.LocalDate;
+import java.util.List;
 
 @Entity
 @Table(name = "aluno")
@@ -39,6 +42,10 @@ public class Aluno {
 
     @Column(name = "endereco", length = 120, nullable = false)
     private String endereco;
+
+    @OneToMany(mappedBy = "aluno", cascade = CascadeType.ALL)
+    @JsonIgnoreProperties("aluno")
+    private List<Inscricao> inscricao;
 
     public Integer getAlunoId() {
         return alunoId;

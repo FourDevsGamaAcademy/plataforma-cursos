@@ -14,23 +14,31 @@ public class AlunoController {
     @Autowired
     private IAlunoService service;
 
-    @GetMapping("/aluno")
-    public ArrayList<Aluno> recuperarTodos(){
-        return service.buscarTodos();
-    }
-
-    @GetMapping("/aluno/{cpf}")
-    public ResponseEntity<Aluno> retornarAlunoCpf(@PathVariable String cpf){
-        return null;
-    }
-
     @PostMapping("/aluno")
     public ResponseEntity<Aluno> cadastrarAluno(@RequestBody Aluno aluno){
         Aluno res = service.cadastrarNovoAluno(aluno);
         if (res != null){
             return ResponseEntity.ok(res);
         }
-            return ResponseEntity.badRequest().build();
+        return ResponseEntity.badRequest().build();
+    }
+
+    @GetMapping("/aluno")
+    public ResponseEntity<ArrayList<Aluno>> recuperarTodos(){
+        ArrayList<Aluno> res = service.buscarTodos();
+        if (!res.isEmpty()){
+            return ResponseEntity.ok(res);
+        }
+        return ResponseEntity.notFound().build();
+    }
+
+    @PutMapping("/aluno")
+    public ResponseEntity<Aluno> atualizarAluno(@RequestBody Aluno aluno){
+        Aluno res = service.atualizarDados(aluno);
+        if (res != null){
+            return ResponseEntity.ok(aluno);
+        }
+        return ResponseEntity.badRequest().build();
     }
 
     @DeleteMapping("/aluno/{id}")
@@ -39,4 +47,12 @@ public class AlunoController {
         return null;
     }
 
+    @GetMapping("/aluno/{cpf}")
+    public ResponseEntity<Aluno> retornarAlunoCpf(@PathVariable String cpf){
+        Aluno res = service.buscarCpf(cpf);
+        if (res != null){
+            return ResponseEntity.ok(res);
+        }
+        return ResponseEntity.notFound().build();
+    }
 }
