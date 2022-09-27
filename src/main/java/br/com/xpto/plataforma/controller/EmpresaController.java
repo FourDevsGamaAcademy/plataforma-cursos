@@ -49,6 +49,12 @@ public class EmpresaController {
            return null;
        }
     }
+
+    @DeleteMapping("empresa/{id}")
+    public ResponseEntity<Empresa> excluirEmpresa(@PathVariable Integer id) {
+        service.excluirEmpresa(id);
+        return null;
+    }
 }
 
 

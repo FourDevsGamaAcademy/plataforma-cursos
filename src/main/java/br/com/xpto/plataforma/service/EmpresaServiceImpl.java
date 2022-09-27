@@ -47,5 +47,10 @@ public class EmpresaServiceImpl implements IEmpresaService {
         return null;
     }
 
+    @Override
+    public void excluirEmpresa(Integer id) {
+        dao.deleteById(id);
+    }
+
 
 }
