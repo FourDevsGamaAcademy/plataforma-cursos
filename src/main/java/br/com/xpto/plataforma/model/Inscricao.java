@@ -8,22 +8,22 @@ import java.time.LocalDate;
 public class Inscricao {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    @Column(name = "inscricao_id")
+    @Column(name = "inscricao_id", nullable = false)
     private Integer inscricaoId;
 
-	@ManyToOne
-	@JoinColumn(name = "aluno_id") 
-	private Aluno aluno; 
-	
-	@ManyToOne
-	@JoinColumn(name = "curso_id") 
-	private Curso curso;
-	     
-    @Column(name = "status_inscricao")
+    @ManyToOne
+    @JoinColumn(name = "aluno_id", nullable = false)
+    private Aluno aluno;
+
+    @ManyToOne
+    @JoinColumn(name = "curso_id", nullable = false)
+    private Curso curso;
+
+    @Column(columnDefinition = "enum('ABERTO', 'EM_ANDAMENTO', 'CONCLUIDO')", nullable = false)
     @Enumerated(EnumType.STRING)
     private StatusInscricao statusInscricao;
 
-    @Column(name = "data_aplicacao")
+    @Column(name = "data_aplicacao", nullable = false)
     private LocalDate dataAplicacao;
 
     public Integer getInscricaoId() {
@@ -33,15 +33,15 @@ public class Inscricao {
     public void setInscricaoId(Integer inscricaoId) {
         this.inscricaoId = inscricaoId;
     }
-	
-    public Aluno getAluno() { 
-    	return aluno; 
+
+    public Aluno getAluno() {
+        return aluno;
     }
-	  
-	public void setAluno(Aluno aluno) { 
-		this.aluno = aluno; 
-	}
-	 
+
+    public void setAluno(Aluno aluno) {
+        this.aluno = aluno;
+    }
+
     public StatusInscricao getStatusInscricao() {
         return statusInscricao;
     }
@@ -58,12 +58,11 @@ public class Inscricao {
         this.dataAplicacao = dataAplicacao;
     }
 
-	
-	public Curso getCurso() { 
-		return curso; 
-	}
-	  
-	public void setCurso(Curso curso) { 
-		this.curso = curso; 
-	}
+    public Curso getCurso() {
+        return curso;
+    }
+
+    public void setCurso(Curso curso) {
+        this.curso = curso;
+    }
 }

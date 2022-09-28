@@ -1,5 +1,6 @@
+package br.com.xpto.plataforma.model;
 
-  package br.com.xpto.plataforma.model;
-  
-  public enum StatusCurso { CADASTRADO, INICIADO, EM_ANDAMENTO, FINALIZADO }
+public enum StatusCurso {
+    CADASTRADO, INICIADO, EM_ANDAMENTO, FINALIZADO
+}
  

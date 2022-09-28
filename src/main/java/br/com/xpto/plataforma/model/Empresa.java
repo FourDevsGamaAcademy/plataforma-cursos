@@ -23,10 +23,10 @@ public class Empresa {
     @Column(name = "responsavel", length = 45, nullable = false)
     private String responsavel;
 
-    @Column(name = "email", length = 30, nullable = false, unique = true)
+    @Column(name = "email", length = 45, nullable = false, unique = true)
     private String email;
 
-    @Column(name = "telefone", nullable = false)
+    @Column(name = "telefone", length = 15, nullable = false)
     private String telefone;
 
     public Integer getEmpresaId() {
