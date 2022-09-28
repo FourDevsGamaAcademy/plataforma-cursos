@@ -40,5 +40,9 @@ public class CursoServiceImpl implements ICursoService{
 		return null;
 	}
 
+	@Override
+	public Curso buscarPorNome(String nome) {
+		return null;
+	}
 
 }

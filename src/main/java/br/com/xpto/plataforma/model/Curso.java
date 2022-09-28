@@ -11,16 +11,10 @@ public class Curso {
     @Column(name = "curso_id", nullable = false)
     private Integer cursoId;
 
-	/* Tirar comentario para integracao
-	 * @ManyToOne
-	 * 
-	 * @JoinColumn(name = "empresa_id") private Empresa empresa;
-	 */
-
-    //Tirar esse bloco ao conectar com a api da empresa
-    @Column(name = "empresa_id", nullable = false)
-    private Integer empresaId; 
-    
+	@ManyToOne
+	@JoinColumn(name = "empresa_id") 
+	private Empresa empresa;
+	     
     @Column(name = "nome", length = 45, nullable = false)
     private String nome;
 
@@ -58,21 +52,13 @@ public class Curso {
         this.cargaHoraria = cargaHoraria;
     }
 
-	/* Tirar comentario
-	 * public Empresa getEmpresa() { return empresa; }
-	 * 
-	 * public void setEmpresa(Empresa empresa) { this.empresa = empresa; }
-	 */
-    
-    //apagar a partir daqui
-    public Integer getEmpresaId() {
-		return empresaId;
+	public Empresa getEmpresa() { 
+		return empresa; 
 	}
-
-	public void setEmpresaId(Integer empresaId) {
-		this.empresaId = empresaId;
-	}
-	//apagar ate aqui
+	  
+	public void setEmpresa(Empresa empresa) { 
+		this.empresa = empresa; 
+	}    
 	
     public String getDescricao() {
         return descricao;

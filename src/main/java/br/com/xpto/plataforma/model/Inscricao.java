@@ -11,24 +11,14 @@ public class Inscricao {
     @Column(name = "inscricao_id")
     private Integer inscricaoId;
 
-	/*
-	 * @ManyToOne
-	 * 
-	 * @JoinColumn(name = "aluno_id") private Aluno aluno;
-	 */
-
-	/*
-	 * @ManyToOne
-	 * 
-	 * @JoinColumn(name = "curso_id") private Curso curso;
-	 */
-    
-	@Column(name = "aluno_id")
-    private Integer alunoId;
-    @Column (name = "curso_id")
-    private Integer cursoId;
-
-    
+	@ManyToOne
+	@JoinColumn(name = "aluno_id") 
+	private Aluno aluno; 
+	
+	@ManyToOne
+	@JoinColumn(name = "curso_id") 
+	private Curso curso;
+	     
     @Column(name = "status_inscricao")
     @Enumerated(EnumType.STRING)
     private StatusInscricao statusInscricao;
@@ -43,13 +33,15 @@ public class Inscricao {
     public void setInscricaoId(Integer inscricaoId) {
         this.inscricaoId = inscricaoId;
     }
-
-	/*
-	 * public Aluno getAluno() { return aluno; }
-	 * 
-	 * public void setAluno(Aluno aluno) { this.aluno = aluno; }
-	 */
-
+	
+    public Aluno getAluno() { 
+    	return aluno; 
+    }
+	  
+	public void setAluno(Aluno aluno) { 
+		this.aluno = aluno; 
+	}
+	 
     public StatusInscricao getStatusInscricao() {
         return statusInscricao;
     }
@@ -66,25 +58,12 @@ public class Inscricao {
         this.dataAplicacao = dataAplicacao;
     }
 
-	/*
-	 * public Curso getCurso() { return curso; }
-	 * 
-	 * public void setCurso(Curso curso) { this.curso = curso; }
-	 */
-    
-    public Integer getAlunoId() {
-		return alunoId;
-	}
-
-	public void setAlunoId(Integer alunoId) {
-		this.alunoId = alunoId;
-	}
 	
-	public Integer getCursoId() {
-		return cursoId;
+	public Curso getCurso() { 
+		return curso; 
 	}
-
-	public void setCursoId(Integer cursoId) {
-		this.cursoId = cursoId;
+	  
+	public void setCurso(Curso curso) { 
+		this.curso = curso; 
 	}
 }

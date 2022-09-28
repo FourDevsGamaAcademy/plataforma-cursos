@@ -23,7 +23,6 @@ public class CursoController {
 	private ICursoService service;
 	
 	//recuperar todos
-	
 	@GetMapping("/cursos") 
 	public ArrayList<Curso> recuperarTodoMundo(){ 
 		return service.recuperarTodos(); 
