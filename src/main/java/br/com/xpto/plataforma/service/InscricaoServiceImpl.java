@@ -1,21 +1,20 @@
 package br.com.xpto.plataforma.service;
 
-import java.util.ArrayList;
-
+import br.com.xpto.plataforma.dao.InscricaoDAO;
+import br.com.xpto.plataforma.model.Inscricao;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
-import br.com.xpto.plataforma.dao.InscricaoDAO;
-import br.com.xpto.plataforma.model.Inscricao;
+import java.util.ArrayList;
 
 @Service("InscricaoServiceImpl")
-public class InscricaoServiceImpl implements IInscricaoService{
+public class InscricaoServiceImpl implements IInscricaoService {
 	@Autowired
 	private InscricaoDAO dao;
-	
+
 	@Override
 	public ArrayList<Inscricao> recuperarTodas() {
-		return (ArrayList<Inscricao>)dao.findAll();
+		return (ArrayList<Inscricao>) dao.findAll();
 	}
 
 	@Override
@@ -30,7 +29,7 @@ public class InscricaoServiceImpl implements IInscricaoService{
 
 	@Override
 	public void excluirInscricao(Integer Id) {
-		dao.deleteById(Id);		
+		dao.deleteById(Id);
 	}
 
 	@Override
