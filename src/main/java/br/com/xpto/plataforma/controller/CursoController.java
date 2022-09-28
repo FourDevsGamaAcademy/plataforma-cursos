@@ -1,20 +1,13 @@
 package br.com.xpto.plataforma.controller;
 
-import java.util.ArrayList;
-
+import br.com.xpto.plataforma.model.Curso;
+import br.com.xpto.plataforma.service.ICursoService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Qualifier;
 import org.springframework.http.ResponseEntity;
-import org.springframework.web.bind.annotation.DeleteMapping;
-import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.PathVariable;
-import org.springframework.web.bind.annotation.PostMapping;
-import org.springframework.web.bind.annotation.PutMapping;
-import org.springframework.web.bind.annotation.RequestBody;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.bind.annotation.*;
 
-import br.com.xpto.plataforma.model.Curso;
-import br.com.xpto.plataforma.service.ICursoService;
+import java.util.ArrayList;
 
 @RestController
 public class CursoController {
@@ -23,7 +16,7 @@ public class CursoController {
 	private ICursoService service;
 	
 	//recuperar todos
-	@GetMapping("/cursos") 
+	@GetMapping("/cursos")
 	public ArrayList<Curso> recuperarTodoMundo(){ 
 		return service.recuperarTodos(); 
 	}
@@ -54,7 +47,7 @@ public class CursoController {
 		return ResponseEntity.ok(null);
 	}
 	
-	@PutMapping("cursos")
+	@PutMapping("/cursos")
 	public ResponseEntity<Curso> atualizarStatusCurso(@RequestBody Curso status){
 		Curso res = service.atualizarStatusCurso(status);
 		if (res != null) {

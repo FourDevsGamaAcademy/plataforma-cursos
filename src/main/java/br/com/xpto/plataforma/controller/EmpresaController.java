@@ -14,7 +14,7 @@ public class EmpresaController {
     @Autowired
     private IEmpresaService service;
 
-    @GetMapping("/empresa")
+    @GetMapping("/empresas")
     public ArrayList<Empresa> recuperarTodas() {
         return service.buscarTodas();
     }
@@ -43,11 +43,11 @@ public class EmpresaController {
     @GetMapping("/empresa/{id}")
     public ResponseEntity<Empresa> buscarPorId(@PathVariable Integer id){
         Empresa resultado = service.buscarPeloId(id);
-       if(resultado != null){
-           return ResponseEntity.ok(resultado);
-       } else {
-           return null;
-       }
+        if(resultado != null){
+            return ResponseEntity.ok(resultado);
+        } else {
+            return null;
+        }
     }
 
     @DeleteMapping("/empresa/{id}")
