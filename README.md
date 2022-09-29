@@ -32,6 +32,9 @@
     - IDEs (Intellij e Eclipse);
     - Postman.
 
+* Banco de Dados
+    - MySQL.
+
 * Frontend
     - HTML;
     - CSS;
@@ -40,6 +43,7 @@
 
 * Infraestrutura 
     - AWS
+        - Redis;
         - Lambda;
         - EC2;
         - Bucket S3.
