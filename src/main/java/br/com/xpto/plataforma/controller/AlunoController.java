@@ -1,6 +1,5 @@
 package br.com.xpto.plataforma.controller;
 
-import br.com.xpto.plataforma.dao.AlunoDAO;
 import br.com.xpto.plataforma.model.Aluno;
 import br.com.xpto.plataforma.service.IAlunoService;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -10,12 +9,11 @@ import org.springframework.web.bind.annotation.*;
 import java.util.ArrayList;
 
 @RestController
+@CrossOrigin("*")
 public class AlunoController {
 
     @Autowired
     private IAlunoService service;
-    @Autowired
-    private AlunoDAO dao;
 
     @PostMapping("/alunos")
     public ResponseEntity<Aluno> cadastrarAluno(@RequestBody Aluno aluno){

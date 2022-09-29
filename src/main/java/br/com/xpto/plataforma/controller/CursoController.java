@@ -1,5 +1,6 @@
 package br.com.xpto.plataforma.controller;
 
+import br.com.xpto.plataforma.model.Aluno;
 import br.com.xpto.plataforma.model.Curso;
 import br.com.xpto.plataforma.service.ICursoService;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -10,6 +11,7 @@ import org.springframework.web.bind.annotation.*;
 import java.util.ArrayList;
 
 @RestController
+@CrossOrigin("*")
 public class CursoController {
 	@Autowired
 	@Qualifier("CursoImpl")
@@ -47,10 +49,10 @@ public class CursoController {
 		return ResponseEntity.ok(null);
 	}
 	
-	@PutMapping("/cursos")
-	public ResponseEntity<Curso> atualizarStatusCurso(@RequestBody Curso status){
-		Curso res = service.atualizarStatusCurso(status);
-		if (res != null) {
+	@PutMapping("/cursos/{id}")
+	public ResponseEntity<Curso> atualizarStatusCurso(@RequestBody Curso novoCurso, @PathVariable Integer id){
+		Curso res = service.atualizarDados(id, novoCurso);
+		if (res != null){
 			return ResponseEntity.ok(res);
 		}
 		return ResponseEntity.badRequest().build();

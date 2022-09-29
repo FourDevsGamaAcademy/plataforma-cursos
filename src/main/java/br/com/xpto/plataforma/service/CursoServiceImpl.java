@@ -33,11 +33,20 @@ public class CursoServiceImpl implements ICursoService {
     }
 
     @Override
-    public Curso atualizarStatusCurso(Curso status) {
-        if (status.getCursoId() != null && status.getStatusCurso() != null) {
-            return dao.save(status);
-        }
-        return null;
+    public Curso atualizarDados(Integer id, Curso novoCurso) {
+        return dao.findById(id).map(curso -> {
+            curso.setStatusCurso(novoCurso.getStatusCurso());
+            curso.setCargaHoraria(novoCurso.getCargaHoraria());
+            curso.setDescricao(novoCurso.getDescricao());
+            curso.setEmpresa(novoCurso.getEmpresa());
+            curso.setDataCriacao(novoCurso.getDataCriacao());
+            curso.setDataFim(novoCurso.getDataFim());
+            curso.setNome(novoCurso.getNome());
+            curso.setDataInicio(novoCurso.getDataInicio());
+            curso.setFimInscricao(novoCurso.getFimInscricao());
+            curso.setInicioInscricao(novoCurso.getInicioInscricao());
+            return dao.save(curso);
+        }).orElse(null);
     }
 
     @Override

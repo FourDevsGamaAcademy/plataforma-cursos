@@ -1,5 +1,6 @@
 package br.com.xpto.plataforma.service;
 
+import br.com.xpto.plataforma.model.Aluno;
 import br.com.xpto.plataforma.model.Curso;
 
 import java.util.ArrayList;
@@ -15,5 +16,5 @@ public interface ICursoService {
 
     void excluirCurso(Integer Id);
 
-    Curso atualizarStatusCurso(Curso status);
+    Curso atualizarDados(Integer id, Curso novoCurso);
 }
