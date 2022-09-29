@@ -10,51 +10,53 @@ import org.springframework.web.bind.annotation.*;
 import java.util.ArrayList;
 
 @RestController
+@CrossOrigin("*")
 public class InscricaoController {
-	@Autowired
-	@Qualifier("InscricaoServiceImpl")
-	private IInscricaoService service;
-	
-	//recuperar todos
-	
-	@GetMapping("/inscricoes")
-	public ArrayList<Inscricao> recuperarTodoMundo(){ 
-		return service.recuperarTodas(); 
-	}
+    @Autowired
+    @Qualifier("InscricaoServiceImpl")
+    private IInscricaoService service;
 
-	//recuperar pelo ID
-	@GetMapping("/inscricoes/{codigo}")
-	public ResponseEntity<Inscricao> recuperarPeloId(@PathVariable Integer codigo){
-		Inscricao res = service.recuperarPeloId(codigo);
-		if (res != null) {
-			return ResponseEntity.ok(res);
-		}
-		return ResponseEntity.status(404).build();
-	}
-		
-	//cadastrar
-	@PostMapping("/inscricoes")
-	public ResponseEntity<Inscricao> inserirNovoCurso(@RequestBody Inscricao novo){
-		Inscricao res = service.cadastrarNovo(novo);
-		if (res != null) {
-			return ResponseEntity.ok(res);
-			}
-		return ResponseEntity.badRequest().build();
-	}
-	//excluir
-	@DeleteMapping("/inscricao/{id}")
-	public ResponseEntity<Inscricao> excluirInscricao(@PathVariable Integer id){
-		service.excluirInscricao(id);
-		return ResponseEntity.ok(null);
-	}
-	
-	@PutMapping("/inscricao")
-	public ResponseEntity<Inscricao> atualizarStatusInscricao(@RequestBody Inscricao status){
-		Inscricao res = service.atualizarStatusInscricao(status);
-		if (res != null) {
-			return ResponseEntity.ok(res);
-		}
-		return ResponseEntity.badRequest().build();
-	}
+    //recuperar todos
+
+    @GetMapping("/inscricoes/todos")
+    public ArrayList<Inscricao> recuperarTodoMundo() {
+        return service.recuperarTodas();
+    }
+
+    //recuperar pelo ID
+    @GetMapping("/inscricoes/{id}")
+    public ResponseEntity<Inscricao> recuperarPeloId(@PathVariable Integer id) {
+        Inscricao res = service.recuperarPeloId(id);
+        if (res != null) {
+            return ResponseEntity.ok(res);
+        }
+        return ResponseEntity.notFound().build();
+    }
+
+    //cadastrar
+    @PostMapping("/inscricoes")
+    public ResponseEntity<Inscricao> inserirNovoCurso(@RequestBody Inscricao novo) {
+        Inscricao res = service.cadastrarNovo(novo);
+        if (res != null) {
+            return ResponseEntity.ok(res);
+        }
+        return ResponseEntity.badRequest().build();
+    }
+
+    //excluir
+    @DeleteMapping("/inscricoes/{id}")
+    public ResponseEntity<Inscricao> excluirInscricao(@PathVariable Integer id) {
+        service.excluirInscricao(id);
+        return ResponseEntity.ok(null);
+    }
+
+    @PutMapping("/inscricoes/{id}")
+    public ResponseEntity<Inscricao> atualizarStatusInscricao(@RequestBody Inscricao novaInscricao, @PathVariable Integer id) {
+        Inscricao res = service.atualizarDados(id, novaInscricao);
+        if (res != null) {
+            return ResponseEntity.ok(res);
+        }
+        return ResponseEntity.badRequest().build();
+    }
 
 }

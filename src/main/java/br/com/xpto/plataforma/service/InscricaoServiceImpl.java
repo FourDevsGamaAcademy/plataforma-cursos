@@ -9,35 +9,38 @@ import java.util.ArrayList;
 
 @Service("InscricaoServiceImpl")
 public class InscricaoServiceImpl implements IInscricaoService {
-	@Autowired
-	private InscricaoDAO dao;
+    @Autowired
+    private InscricaoDAO dao;
 
-	@Override
-	public ArrayList<Inscricao> recuperarTodas() {
-		return (ArrayList<Inscricao>) dao.findAll();
-	}
+    @Override
+    public ArrayList<Inscricao> recuperarTodas() {
+        return (ArrayList<Inscricao>) dao.findAll();
+    }
 
-	@Override
-	public Inscricao recuperarPeloId(Integer codigo) {
-		return dao.findById(codigo).orElse(null);
-	}
+    @Override
+    public Inscricao recuperarPeloId(Integer id) {
+        return dao.findById(id).orElse(null);
+    }
 
-	@Override
-	public Inscricao cadastrarNovo(Inscricao novo) {
-		return dao.save(novo);
-	}
+    @Override
+    public Inscricao cadastrarNovo(Inscricao novo) {
+        return dao.save(novo);
+    }
 
-	@Override
-	public void excluirInscricao(Integer Id) {
-		dao.deleteById(Id);
-	}
+    @Override
+    public void excluirInscricao(Integer Id) {
+        dao.deleteById(Id);
+    }
 
-	@Override
-	public Inscricao atualizarStatusInscricao(Inscricao status) {
-		if (status.getInscricaoId() != null && status.getStatusInscricao() != null) {
-			return dao.save(status);
-		}
-		return null;
-	}
+    @Override
+    public Inscricao atualizarDados(Integer id, Inscricao novaInscricao) {
+        return dao.findById(id).map(inscricao -> {
+            inscricao.setAluno(novaInscricao.getAluno());
+            inscricao.setStatusInscricao(novaInscricao.getStatusInscricao());
+            inscricao.setCurso(novaInscricao.getCurso());
+            inscricao.setDataAplicacao(novaInscricao.getDataAplicacao());
+            return dao.save(inscricao);
+        }).orElse(null);
+    }
 
 }
