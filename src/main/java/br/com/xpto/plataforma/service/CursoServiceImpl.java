@@ -35,10 +35,10 @@ public class CursoServiceImpl implements ICursoService {
     @Override
     public Curso atualizarDados(Integer id, Curso novoCurso) {
         return dao.findById(id).map(curso -> {
+        	curso.setEmpresa(novoCurso.getEmpresaId());
             curso.setStatusCurso(novoCurso.getStatusCurso());
             curso.setCargaHoraria(novoCurso.getCargaHoraria());
             curso.setDescricao(novoCurso.getDescricao());
-            curso.setEmpresa(novoCurso.getEmpresa());
             curso.setDataCriacao(novoCurso.getDataCriacao());
             curso.setDataFim(novoCurso.getDataFim());
             curso.setNome(novoCurso.getNome());

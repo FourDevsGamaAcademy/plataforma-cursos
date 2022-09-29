@@ -1,6 +1,7 @@
 package br.com.xpto.plataforma.model;
 
 import javax.persistence.*;
+
 import java.time.LocalDate;
 
 @Entity
@@ -13,7 +14,7 @@ public class Curso {
     private Integer cursoId;
 
     @ManyToOne
-    @JoinColumn(name = "empresa_id", nullable = false)
+	@JoinColumn(name = "empresa_id", nullable = false) 
     private Empresa empresa;
 
     @Column(name = "nome", length = 45, nullable = false)
@@ -44,6 +45,7 @@ public class Curso {
     @Enumerated(EnumType.STRING)
     private StatusCurso statusCurso;
 
+    
     public Integer getCargaHoraria() {
         return cargaHoraria;
     }
@@ -52,13 +54,10 @@ public class Curso {
         this.cargaHoraria = cargaHoraria;
     }
 
-    public Empresa getEmpresa() {
-        return empresa;
+    public String getEmpresa() {
+        return empresa.getNome();
     }
 
-    public void setEmpresa(Empresa empresa) {
-        this.empresa = empresa;
-    }
 
     public String getDescricao() {
         return descricao;
@@ -108,7 +107,11 @@ public class Curso {
         this.fimInscricao = fimInscricao;
     }
 
-    public Integer getCursoId() {
+    public void setEmpresa(Empresa empresa) {
+		this.empresa = empresa;
+	}
+
+	public Integer getCursoId() {
         return cursoId;
     }
 
@@ -131,4 +134,10 @@ public class Curso {
     public void setStatusCurso(StatusCurso statusCurso) {
         this.statusCurso = statusCurso;
     }
+    
+    public Empresa getEmpresaId() {
+    	return empresa;
+    }
+    
 }
+
