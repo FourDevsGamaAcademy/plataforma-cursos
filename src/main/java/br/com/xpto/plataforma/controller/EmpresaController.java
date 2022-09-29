@@ -21,20 +21,19 @@ public class EmpresaController {
     }
 
     @PostMapping("/empresas")
-    public ResponseEntity<Empresa> incluirNova(@RequestBody Empresa nova){
+    public ResponseEntity<Empresa> incluirNova(@RequestBody Empresa nova) {
         Empresa resultado = service.criarNova(nova);
-        if (resultado != null){
+        if (resultado != null) {
             return ResponseEntity.ok(resultado);
-        }
-        else {
-           return ResponseEntity.badRequest().build();
+        } else {
+            return ResponseEntity.badRequest().build();
         }
     }
 
     @PutMapping("/empresas/{id}")
-    public ResponseEntity<Empresa> alterar(@RequestBody Empresa novaEmpresa, @PathVariable Integer id){
+    public ResponseEntity<Empresa> alterar(@RequestBody Empresa novaEmpresa, @PathVariable Integer id) {
         Empresa res = service.atualizarDados(id, novaEmpresa);
-        if (res != null){
+        if (res != null) {
             return ResponseEntity.ok(res);
         } else {
             return ResponseEntity.badRequest().build();
@@ -42,9 +41,9 @@ public class EmpresaController {
     }
 
     @GetMapping("/empresas/{id}")
-    public ResponseEntity<Empresa> buscarPorId(@PathVariable Integer id){
+    public ResponseEntity<Empresa> buscarPorId(@PathVariable Integer id) {
         Empresa resultado = service.buscarPeloId(id);
-        if (resultado != null){
+        if (resultado != null) {
             return ResponseEntity.ok(resultado);
         } else {
             return null;

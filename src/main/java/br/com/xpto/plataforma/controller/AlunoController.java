@@ -16,51 +16,51 @@ public class AlunoController {
     private IAlunoService service;
 
     @PostMapping("/alunos")
-    public ResponseEntity<Aluno> cadastrarAluno(@RequestBody Aluno aluno){
+    public ResponseEntity<Aluno> cadastrarAluno(@RequestBody Aluno aluno) {
         Aluno res = service.cadastrarNovoAluno(aluno);
-        if (res != null){
+        if (res != null) {
             return ResponseEntity.ok(res);
         }
         return ResponseEntity.badRequest().build();
     }
 
     @GetMapping("/alunos/todos")
-    public ResponseEntity<ArrayList<Aluno>> recuperarTodos(){
+    public ResponseEntity<ArrayList<Aluno>> recuperarTodos() {
         ArrayList<Aluno> res = service.buscarTodos();
-        if (!res.isEmpty()){
+        if (!res.isEmpty()) {
             return ResponseEntity.ok(res);
         }
         return ResponseEntity.notFound().build();
     }
 
     @PutMapping("/alunos/{id}")
-    public ResponseEntity<Aluno> atualizarAluno(@RequestBody Aluno novoAluno, @PathVariable Integer id){
+    public ResponseEntity<Aluno> atualizarAluno(@RequestBody Aluno novoAluno, @PathVariable Integer id) {
         Aluno res = service.atualizarDados(id, novoAluno);
-        if (res != null){
+        if (res != null) {
             return ResponseEntity.ok(res);
         }
         return ResponseEntity.badRequest().build();
     }
 
     @DeleteMapping("/alunos/{id}")
-    public ResponseEntity<Aluno> excluirAluno(@PathVariable Integer id){
+    public ResponseEntity<Aluno> excluirAluno(@PathVariable Integer id) {
         service.excluirAluno(id);
         return null;
     }
 
     @GetMapping("/alunos")
-    public ResponseEntity<Aluno> retornarAlunoCpf(@RequestHeader String cpf){
+    public ResponseEntity<Aluno> retornarAlunoCpf(@RequestHeader String cpf) {
         Aluno res = service.buscarCpf(cpf);
-        if (res != null){
+        if (res != null) {
             return ResponseEntity.ok(res);
         }
         return ResponseEntity.notFound().build();
     }
 
     @GetMapping("/alunos/{id}")
-    public ResponseEntity<Aluno> retornarAlunoId(@PathVariable Integer id){
+    public ResponseEntity<Aluno> retornarAlunoId(@PathVariable Integer id) {
         Aluno res = service.buscarPeloId(id);
-        if (res != null){
+        if (res != null) {
             return ResponseEntity.ok(res);
         }
         return ResponseEntity.notFound().build();

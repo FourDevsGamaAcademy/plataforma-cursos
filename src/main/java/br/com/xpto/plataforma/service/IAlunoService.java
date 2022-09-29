@@ -7,9 +7,14 @@ import java.util.ArrayList;
 public interface IAlunoService {
 
     Aluno cadastrarNovoAluno(Aluno novo);
+
     ArrayList<Aluno> buscarTodos();
+
     Aluno atualizarDados(Integer id, Aluno novoAluno);
+
     void excluirAluno(Integer id);
+
     Aluno buscarCpf(String cpf);
+
     Aluno buscarPeloId(Integer id);
 }

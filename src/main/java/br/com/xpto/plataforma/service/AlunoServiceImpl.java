@@ -17,7 +17,7 @@ public class AlunoServiceImpl implements IAlunoService {
     public Aluno cadastrarNovoAluno(Aluno novo) {
         // buscar pelo cpf
         if (novo.getNome() != null && novo.getSobrenome() != null && novo.getCpf() != null && novo.getCelular() != null
-                && novo.getEndereco() != null && novo.getEmail() != null){
+                && novo.getEndereco() != null && novo.getEmail() != null) {
             return dao.save(novo);
         }
         return null;
@@ -56,8 +56,8 @@ public class AlunoServiceImpl implements IAlunoService {
 
     @Override
     public Aluno buscarCpf(String cpf) {
-        Aluno aluno =  dao.findByCpf(cpf);
-        if (aluno != null){
+        Aluno aluno = dao.findByCpf(cpf);
+        if (aluno != null) {
             return aluno;
         }
         return null;

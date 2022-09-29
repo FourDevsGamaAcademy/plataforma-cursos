@@ -6,7 +6,6 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 import java.util.ArrayList;
-import java.util.List;
 
 @Service
 public class EmpresaServiceImpl implements IEmpresaService {
@@ -16,7 +15,7 @@ public class EmpresaServiceImpl implements IEmpresaService {
 
     @Override
     public Empresa criarNova(Empresa nova) {
-        if (nova.getNome()!= null){
+        if (nova.getNome() != null) {
             return dao.save(nova);
         }
         return null;
@@ -38,7 +37,7 @@ public class EmpresaServiceImpl implements IEmpresaService {
 
     @Override
     public ArrayList<Empresa> buscarTodas() {
-      return (ArrayList<Empresa>) dao.findAll();
+        return (ArrayList<Empresa>) dao.findAll();
     }
 
     @Override
