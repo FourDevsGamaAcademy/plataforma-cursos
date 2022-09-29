@@ -1,5 +1,9 @@
 <h1 align="center"> CRAVO&CANELA - Squad 4DEVS (FourDevs) </h1>
+
+<p align="center">
 <img src="/readme/logo5.JPG" width=225 alt="Logo Cravo&Canela"/>
+</p>
+
 <h3> Quem somos? </h3>
 <p>Somos uma consultoria (gratuita) que visa conectar alunos com empresas que oferecem e querem divulgar seus cursos na área de tecnologia.</p>
 
