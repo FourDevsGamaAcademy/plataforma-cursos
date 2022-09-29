@@ -4,7 +4,7 @@
 <img src="/readme/logo5.JPG" width=225 alt="Logo Cravo&Canela"/>
 </p>
 
-<h3 align="center" > Quem somos? </h3>
+<h3 align="center" > Quem Somos </h3>
 <p align="justify">Somos uma consultoria (gratuita) que visa conectar alunos com empresas que oferecem e querem divulgar seus cursos na área de tecnologia.</p>
 
 <h3>Missão: </h3>
@@ -17,5 +17,18 @@
 <p align="justify">Ética; Transparência (clareza nas relações); Inovação; Respeito.</p>
 
 <h2 align="center" > Documentação do Projeto </h3>
-<h3> Tecnologias e Soluções Utilizadas </h3>
+
+<h3> Tecnologias, Metodologias e Soluções Utilizadas </h3>
+
+<h1> Metodologia Ágil </h1>
+
+<h1> Backend </h1>
+
+<h1> Frontend </h1>
+
+<h1> Infraestrutura </h1>
+
+<h2 align="center" > Consumindo a API </h3>
+
+
 
