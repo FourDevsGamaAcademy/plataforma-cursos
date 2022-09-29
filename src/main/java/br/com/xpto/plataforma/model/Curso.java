@@ -52,7 +52,11 @@ public class Curso {
         this.cargaHoraria = cargaHoraria;
     }
 
-    public Empresa getEmpresa() {
+    public String getEmpresa() {
+        return empresa.getNome();
+    }
+
+    public Empresa getEmpresaId() {
         return empresa;
     }
 

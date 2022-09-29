@@ -38,7 +38,7 @@ public class CursoServiceImpl implements ICursoService {
             curso.setStatusCurso(novoCurso.getStatusCurso());
             curso.setCargaHoraria(novoCurso.getCargaHoraria());
             curso.setDescricao(novoCurso.getDescricao());
-            curso.setEmpresa(novoCurso.getEmpresa());
+            curso.setEmpresa(novoCurso.getEmpresaId());
             curso.setDataCriacao(novoCurso.getDataCriacao());
             curso.setDataFim(novoCurso.getDataFim());
             curso.setNome(novoCurso.getNome());
