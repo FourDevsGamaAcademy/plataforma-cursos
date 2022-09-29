@@ -1,5 +1,6 @@
 package br.com.xpto.plataforma.controller;
 
+import br.com.xpto.plataforma.dao.AlunoDAO;
 import br.com.xpto.plataforma.model.Aluno;
 import br.com.xpto.plataforma.service.IAlunoService;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -13,8 +14,10 @@ public class AlunoController {
 
     @Autowired
     private IAlunoService service;
+    @Autowired
+    private AlunoDAO dao;
 
-    @PostMapping("/aluno")
+    @PostMapping("/alunos")
     public ResponseEntity<Aluno> cadastrarAluno(@RequestBody Aluno aluno){
         Aluno res = service.cadastrarNovoAluno(aluno);
         if (res != null){
@@ -23,7 +26,7 @@ public class AlunoController {
         return ResponseEntity.badRequest().build();
     }
 
-    @GetMapping("/aluno")
+    @GetMapping("/alunos")
     public ResponseEntity<ArrayList<Aluno>> recuperarTodos(){
         ArrayList<Aluno> res = service.buscarTodos();
         if (!res.isEmpty()){
@@ -32,22 +35,22 @@ public class AlunoController {
         return ResponseEntity.notFound().build();
     }
 
-    @PutMapping("/aluno")
-    public ResponseEntity<Aluno> atualizarAluno(@RequestBody Aluno aluno){
-        Aluno res = service.atualizarDados(aluno);
+    @PutMapping("/alunos/{id}")
+    public ResponseEntity<Aluno> atualizarAluno(@RequestBody Aluno novoAluno, @PathVariable Integer id){
+        Aluno res = service.atualizarDados(id, novoAluno);
         if (res != null){
-            return ResponseEntity.ok(aluno);
+            return ResponseEntity.ok(res);
         }
         return ResponseEntity.badRequest().build();
     }
 
-    @DeleteMapping("/aluno/{id}")
+    @DeleteMapping("/alunos/{id}")
     public ResponseEntity<Aluno> excluirAluno(@PathVariable Integer id){
         service.excluirAluno(id);
         return null;
     }
 
-    @GetMapping("/aluno/{cpf}")
+    @GetMapping("/alunos/{cpf}")
     public ResponseEntity<Aluno> retornarAlunoCpf(@PathVariable String cpf){
         Aluno res = service.buscarCpf(cpf);
         if (res != null){

@@ -29,12 +29,19 @@ public class AlunoServiceImpl implements IAlunoService {
     }
 
     @Override
-    public Aluno atualizarDados(Aluno dados) {
-        if (dados.getAlunoId() != null && dados.getNome() != null && dados.getSobrenome() != null && dados.getCpf() != null && dados.getCelular() != null
-                && dados.getEndereco() != null && dados.getEmail() != null){
-            return dao.save(dados);
-        }
-        return null;
+    public Aluno atualizarDados(Integer id, Aluno novoAluno) {
+        return dao.findById(id).map(aluno -> {
+            aluno.setCelular(novoAluno.getCelular());
+            aluno.setEmail(novoAluno.getEmail());
+            aluno.setEndereco(novoAluno.getEndereco());
+            aluno.setNome(novoAluno.getNome());
+            aluno.setTelefone(novoAluno.getTelefone());
+            aluno.setSobrenome(novoAluno.getSobrenome());
+            aluno.setDataNasc(novoAluno.getDataNasc());
+            aluno.setCpf(novoAluno.getCpf());
+            aluno.setGenero(novoAluno.getGenero());
+            return dao.save(aluno);
+        }).orElse(null);
     }
 
     @Override

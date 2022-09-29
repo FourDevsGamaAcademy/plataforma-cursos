@@ -8,7 +8,7 @@ public interface IAlunoService {
 
     Aluno cadastrarNovoAluno(Aluno novo);
     ArrayList<Aluno> buscarTodos();
-    Aluno atualizarDados(Aluno dados);
+    Aluno atualizarDados(Integer id, Aluno novoAluno);
     void excluirAluno(Integer id);
     Aluno buscarCpf(String cpf);
     Aluno buscarPeloId(Integer id);
