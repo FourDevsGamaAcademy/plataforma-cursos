@@ -18,8 +18,8 @@ public class CursoServiceImpl implements ICursoService {
     }
 
     @Override
-    public Curso recuperarPeloId(Integer codigo) {
-        return dao.findById(codigo).orElse(null);
+    public Curso recuperarPeloId(Integer id) {
+        return dao.findById(id).orElse(null);
     }
 
     @Override

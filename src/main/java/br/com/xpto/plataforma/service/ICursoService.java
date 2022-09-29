@@ -1,6 +1,5 @@
 package br.com.xpto.plataforma.service;
 
-import br.com.xpto.plataforma.model.Aluno;
 import br.com.xpto.plataforma.model.Curso;
 
 import java.util.ArrayList;
@@ -8,7 +7,7 @@ import java.util.ArrayList;
 public interface ICursoService {
     ArrayList<Curso> recuperarTodos();
 
-    Curso recuperarPeloId(Integer codigo);
+    Curso recuperarPeloId(Integer id);
 
     Curso buscarPorNome(String nome);
 

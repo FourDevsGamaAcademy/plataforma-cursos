@@ -1,6 +1,5 @@
 package br.com.xpto.plataforma.controller;
 
-import br.com.xpto.plataforma.model.Aluno;
 import br.com.xpto.plataforma.model.Curso;
 import br.com.xpto.plataforma.service.ICursoService;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -18,15 +17,15 @@ public class CursoController {
 	private ICursoService service;
 	
 	//recuperar todos
-	@GetMapping("/cursos")
+	@GetMapping("/cursos/todos")
 	public ArrayList<Curso> recuperarTodoMundo(){ 
 		return service.recuperarTodos(); 
 	}
 
 	//recuperar pelo ID
-	@GetMapping("/cursos/{codigo}")
-	public ResponseEntity<Curso> recuperarPeloId(@PathVariable Integer codigo){
-		Curso res = service.recuperarPeloId(codigo);
+	@GetMapping("/cursos/{id}")
+	public ResponseEntity<Curso> recuperarPeloId(@PathVariable Integer id){
+		Curso res = service.recuperarPeloId(id);
 		if (res != null) {
 			return ResponseEntity.ok(res);
 		}
