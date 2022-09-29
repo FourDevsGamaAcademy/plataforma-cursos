@@ -44,6 +44,9 @@
         - EC2;
         - Bucket S3.
 
+* Versionamento de código
+    - Git e Github.
+
 <h2 align="center" > Consumindo a API </h3>
 
 
