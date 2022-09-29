@@ -31,6 +31,7 @@
     - Java 11;
     - Maven;
     - Spring Boot;
+    - JPA;
     - IDEs (Intellij e Eclipse);
     - Postman.
 
@@ -52,6 +53,9 @@
 
 * Versionamento de código
     - Git e Github.
+
+* Documentação
+    - Swagger.
 
 <h2 align="center" > Consumindo a API </h3>
 
