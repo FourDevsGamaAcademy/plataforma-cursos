@@ -4,6 +4,8 @@
 <img src="/readme/logo5.JPG" width=225 alt="Logo Cravo&Canela"/>
 </p>
 
+> Status do Projeto: Concluido :heavy_check_mark:
+
 <h2 align="center" > Quem Somos </h2>
 <p align="justify">Somos uma consultoria (gratuita) que visa conectar alunos com empresas que oferecem e querem divulgar seus cursos na área de tecnologia.</p>
 
