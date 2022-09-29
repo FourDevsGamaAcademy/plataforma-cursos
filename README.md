@@ -20,13 +20,13 @@
 
 <h3> Tecnologias, Metodologias e Soluções Utilizadas </h3>
 
-<h1> Metodologia Ágil </h1>
+<p> Metodologia Ágil </p>
 
-<h1> Backend </h1>
+<p> Backend </p>
 
-<h1> Frontend </h1>
+<p> Frontend </p>
 
-<h1> Infraestrutura </h1>
+<p> Infraestrutura </p>
 
 <h2 align="center" > Consumindo a API </h3>
 
