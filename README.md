@@ -55,12 +55,12 @@
 
 <h2 align="center" > Consumindo a API </h3>
 
-<h5 align="center"> Desenvolvedoras </h5>
-<p align="justify">Aryane Maria Valentim Teixeira</p>
-<p align="justify">Caroline Tavares</p>
-<p align="justify">Deborah Yohana Bertoldo da Silva</p>
-<p align="justify">Patricia Ruiz<p>
-<p align="justify">Raphaela Cristina Oliveira Britto </p>
+<h2 align="center"> Desenvolvedoras </h2>
+<p align="justify">Aryane Maria Valentim Teixeira;</p>
+<p align="justify">Caroline Tavares;</p>
+<p align="justify">Deborah Yohana B. da Silva;</p>
+<p align="justify">Patricia Ruiz;<p>
+<p align="justify">Raphaela Cristina O. Britto. </p>
 
 
 
