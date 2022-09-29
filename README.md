@@ -21,12 +21,28 @@
 <h3> Tecnologias, Metodologias e Soluções Utilizadas </h3>
 
 * Metodologia Ágil
+    - Scrum;
+    - Kanban;
+    - Trello.
 
-<p> * Backend </p>
+* Backend
+    - Java 11;
+    - Maven;
+    - Spring Boot;
+    - IDEs (Intellij e Eclipse);
+    - Postman.
 
-<p> * Frontend </p>
+* Frontend
+    - HTML;
+    - CSS;
+    - TypeScript;
+    - Angular.
 
-<p> * Infraestrutura </p>
+* Infraestrutura 
+    - AWS
+        - Lambda;
+        - EC2;
+        - Bucket S3.
 
 <h2 align="center" > Consumindo a API </h3>
 
