@@ -23,13 +23,17 @@ public class EmpresaServiceImpl implements IEmpresaService {
     }
 
     @Override
-    public Empresa atualizarDados(Empresa dados) {
-        if(dados.getEmpresaId()!=null && dados.getNome() != null && dados.getCnpj() != null
-                && dados.getEndereco() != null && dados.getResponsavel() != null
-                && dados.getEmail() != null && dados.getTelefone() != null){
-            return dao.save(dados);
-        }
-        return null;
+    public Empresa atualizarDados(Integer id, Empresa novaEmpresa) {
+        return dao.findById(id).map(empresa -> {
+            empresa.setCnpj(novaEmpresa.getCnpj());
+            empresa.setEmail(novaEmpresa.getEmail());
+            empresa.setNome(novaEmpresa.getNome());
+            empresa.setEndereco(novaEmpresa.getEndereco());
+            empresa.setTelefone(novaEmpresa.getTelefone());
+            empresa.setResponsavel(novaEmpresa.getResponsavel());
+            return dao.save(empresa);
+        }).orElse(null);
+
     }
 
     @Override

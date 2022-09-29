@@ -13,7 +13,7 @@ public interface IEmpresaService {
 
     Empresa criarNova(Empresa nova);
 
-    Empresa atualizarDados(Empresa dados);
+    Empresa atualizarDados(Integer id, Empresa novaEmpresa);
 
     ArrayList<Empresa> buscarTodas();
 

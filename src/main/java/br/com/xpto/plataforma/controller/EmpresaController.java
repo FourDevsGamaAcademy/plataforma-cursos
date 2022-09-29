@@ -9,17 +9,18 @@ import org.springframework.web.bind.annotation.*;
 import java.util.ArrayList;
 
 @RestController
+@CrossOrigin("*")
 public class EmpresaController {
 
     @Autowired
     private IEmpresaService service;
 
-    @GetMapping("/empresas")
+    @GetMapping("/empresas/todos")
     public ArrayList<Empresa> recuperarTodas() {
         return service.buscarTodas();
     }
 
-    @PostMapping("/empresa")
+    @PostMapping("/empresas")
     public ResponseEntity<Empresa> incluirNova(@RequestBody Empresa nova){
         Empresa resultado = service.criarNova(nova);
         if (resultado != null){
@@ -30,27 +31,27 @@ public class EmpresaController {
         }
     }
 
-    @PutMapping("/empresa")
-    public ResponseEntity<Empresa> alterar(@RequestBody Empresa dados){
-        Empresa resultado = service.atualizarDados(dados);
-        if (resultado != null){
-            return ResponseEntity.ok(resultado);
-        }else {
+    @PutMapping("/empresas/{id}")
+    public ResponseEntity<Empresa> alterar(@RequestBody Empresa novaEmpresa, @PathVariable Integer id){
+        Empresa res = service.atualizarDados(id, novaEmpresa);
+        if (res != null){
+            return ResponseEntity.ok(res);
+        } else {
             return ResponseEntity.badRequest().build();
         }
     }
 
-    @GetMapping("/empresa/{id}")
+    @GetMapping("/empresas/{id}")
     public ResponseEntity<Empresa> buscarPorId(@PathVariable Integer id){
         Empresa resultado = service.buscarPeloId(id);
-        if(resultado != null){
+        if (resultado != null){
             return ResponseEntity.ok(resultado);
         } else {
             return null;
         }
     }
 
-    @DeleteMapping("/empresa/{id}")
+    @DeleteMapping("/empresas/{id}")
     public ResponseEntity<Empresa> excluirEmpresa(@PathVariable Integer id) {
         service.excluirEmpresa(id);
         return null;
