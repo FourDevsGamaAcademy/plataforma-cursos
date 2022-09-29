@@ -24,7 +24,7 @@ public class AlunoController {
         return ResponseEntity.badRequest().build();
     }
 
-    @GetMapping("/alunos")
+    @GetMapping("/alunos/todos")
     public ResponseEntity<ArrayList<Aluno>> recuperarTodos(){
         ArrayList<Aluno> res = service.buscarTodos();
         if (!res.isEmpty()){
@@ -48,9 +48,18 @@ public class AlunoController {
         return null;
     }
 
-    @GetMapping("/alunos/{cpf}")
-    public ResponseEntity<Aluno> retornarAlunoCpf(@PathVariable String cpf){
+    @GetMapping("/alunos")
+    public ResponseEntity<Aluno> retornarAlunoCpf(@RequestHeader String cpf){
         Aluno res = service.buscarCpf(cpf);
+        if (res != null){
+            return ResponseEntity.ok(res);
+        }
+        return ResponseEntity.notFound().build();
+    }
+
+    @GetMapping("/alunos/{id}")
+    public ResponseEntity<Aluno> retornarAlunoId(@PathVariable Integer id){
+        Aluno res = service.buscarPeloId(id);
         if (res != null){
             return ResponseEntity.ok(res);
         }
