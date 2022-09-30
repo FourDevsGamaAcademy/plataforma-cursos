@@ -93,6 +93,7 @@
 - Deletar Alunos 
 <p> Rota:http://localhost:8080/alunos/{id} </p>
 <p> Método: DELETE </p>
+<p align="center"><img src="/readme/deletarAlunos.JPG"/></p>
  
 <p> </p>
 
