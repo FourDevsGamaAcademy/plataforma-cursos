@@ -101,12 +101,12 @@
   <p> Método: GET </p>
   <p align="center"><img src="/readme/buscarAlunosPorCPF.JPG"/></p>
 
-  - Buscar Alunos por ID
+- Buscar Alunos por ID
   <p> Rota:http://localhost:8080/alunos/{id}</p>
   <p> Método: GET </p>
   <p align="center"><img src="/readme/bucarAlunosPorID.JPG"/></p>
 
- <p> </p>
+  <p> </p>
 
 <h4 align="center">Empresas</h4>
 
@@ -117,21 +117,21 @@
 
   <p> </p>
 
- - Cadastrar Empresas
+- Cadastrar Empresas
  <p> Rota:http://localhost:8080/empresas </p>
  <p> Método: POST </p>
  <p align="center"><img src="/readme/cadastrarEmpresas.JPG"/></p>
 
   <p> </p>
 
- - Atualizar Empresas
+- Atualizar Empresas
  <p> Rota:http://localhost:8080/empresas/{id} </p>
  <p> Método: PUT </p>
  <p align="center"><img src="/readme/atualizarEmpresas.JPG"/></p>
 
   <p> </p>
 
- - Deletar Empresas
+- Deletar Empresas
  <p> Rota:http://localhost:8080/empresas/{id} </p>
  <p> Método: DELETE </p>
  <p align="center"><img src="/readme/deletarEmpresa.JPG"/></p>
@@ -174,7 +174,7 @@
  
   <p> </p>
 
-  - Buscar Cursos por ID
+- Buscar Cursos por ID
   <p> Rota:http://localhost:8080/cursos/{id}</p>
   <p> Método: GET </p>
   <p align="center"><img src="/readme/buscarCursosPorID.JPG"/></p>
@@ -183,7 +183,7 @@
 
  <h4 align="center">Inscrições</h4>
 
- - Listar Inscrições 
+- Listar Inscrições 
   <p> Rota: http://localhost:8080/inscricoes/todos </p>
   <p> Método: GET </p>
   <p align="center"><img src="/readme/listarInscricoes.JPG"/></p>
@@ -211,7 +211,7 @@
 
   <p> </p>
 
-  - Buscar Inscricoes por ID
+- Buscar Inscricoes por ID
   <p> Rota:http://localhost:8080/inscricoes/{id}</p>
   <p> Método: GET </p>
   <p align="center"><img src="/readme/buscarInscricoesPorID.JPG"/></p>
