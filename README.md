@@ -105,7 +105,9 @@
   - Buscar Alunos por ID
   <p> Rota:http://localhost:8080/alunos/{id}</p>
   <p> Método: GET </p>
-  <p align="center"><img src="/readme/buscarAlunosPorID.JPG"/></p>
+  <p align="center"><img src="/readme/bucarAlunosPorID.JPG"/></p>
+
+
 
   
 
