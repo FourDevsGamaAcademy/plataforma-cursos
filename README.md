@@ -93,8 +93,7 @@
 - Deletar Alunos 
   <p> Rota:http://localhost:8080/alunos/{id} </p>
   <p> Método: DELETE </p>
-  <p align="center"><img src=""/></p>
-
+ 
   <p> </p>
 
 - Buscar Alunos por CPF
@@ -145,7 +144,70 @@
  <p align="center"><img src="/readme/buscarEmpresasPorID.JPG"/></p>
 
 
-<p align="center">Cursos</p>
+<h4 align="center">Cursos</h4>
+
+- Listar Cursos 
+  <p> Rota:http://localhost:8080/cursos/todos </p>
+  <p> Método: GET </p>
+  
+<p> </p>
+
+- Cadastrar Cursos 
+  <p> Rota:http://localhost:8080/cursos </p>
+  <p> Método: POST </p>
+
+<p> </p>
+
+- Atualizar Cursos 
+  <p> Rota:http://localhost:8080/cursos/{id} </p>
+  <p> Método: PUT </p>
+ 
+  <p> </p>
+
+- Deletar Cursos 
+  <p> Rota:http://localhost:8080/cursos/{id} </p>
+  <p> Método: DELETE </p>
+ 
+  <p> </p>
+
+  - Buscar Cursos por ID
+  <p> Rota:http://localhost:8080/cursos/{id}</p>
+  <p> Método: GET </p>
+
+ <p> </p>
+
+ <h4 align="center">Inscrições</h4>
+
+ - Listar Inscrições 
+  <p> Rota:http://localhost:8080/inscricoes/todos </p>
+  <p> Método: GET </p>
+  
+<p> </p>
+
+- Cadastrar Inscrições 
+  <p> Rota:http://localhost:8080/inscricoes </p>
+  <p> Método: POST </p>
+
+<p> </p>
+
+- Atualizar Inscrições 
+  <p> Rota:http://localhost:8080/inscricoes/{id} </p>
+  <p> Método: PUT </p>
+ 
+  <p> </p>
+
+- Deletar Inscrições 
+  <p> Rota:http://localhost:8080/inscricoes/{id} </p>
+  <p> Método: DELETE </p>
+
+  <p> </p>
+
+  - Buscar Inscricoes por ID
+  <p> Rota:http://localhost:8080/inscricoes/{id}</p>
+  <p> Método: GET </p>
+
+ <p> </p>
+
 
 <h2 align="center"> Desenvolvedoras </h2>
 <p align="justify">Aryane Maria Valentim Teixeira;</p>
