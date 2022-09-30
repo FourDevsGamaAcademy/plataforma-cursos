@@ -191,13 +191,6 @@
   
 <p> </p>
 
-- Cadastrar Inscrições 
-<p> Rota: http://localhost:8080/inscricoes </p>
-<p> Método: POST </p>
-<p align="center"><img src="/readme/cadastrarInscricoes.JPG"/></p>
-
-<p> </p>
-
 - Atualizar Inscrições 
 <p> Rota:http://localhost:8080/inscricoes/{id} </p>
 <p> Método: PUT </p>
