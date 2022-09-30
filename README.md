@@ -149,24 +149,28 @@
 - Listar Cursos 
   <p> Rota:http://localhost:8080/cursos/todos </p>
   <p> Método: GET </p>
+  <p align="center"><img src="/readme/listarCursos.JPG"/></p>
   
 <p> </p>
 
 - Cadastrar Cursos 
   <p> Rota:http://localhost:8080/cursos </p>
   <p> Método: POST </p>
+  <p align="center"><img src="/readme/cadastrarCurso.JPG"/></p>
 
 <p> </p>
 
 - Atualizar Cursos 
   <p> Rota:http://localhost:8080/cursos/{id} </p>
   <p> Método: PUT </p>
+  <p align="center"><img src="/readme/atualizarCursos.JPG"/></p>
  
   <p> </p>
 
 - Deletar Cursos 
   <p> Rota:http://localhost:8080/cursos/{id} </p>
   <p> Método: DELETE </p>
+  <p align="center"><img src="/readme/deletarCursos.JPG"/></p>
  
   <p> </p>
 
