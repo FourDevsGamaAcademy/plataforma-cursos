@@ -208,7 +208,6 @@
 
  <p> </p>
 
-
 <h2 align="center"> Desenvolvedoras </h2>
 <p align="justify">Aryane Maria Valentim Teixeira;</p>
 <p align="justify">Caroline Tavares;</p>
