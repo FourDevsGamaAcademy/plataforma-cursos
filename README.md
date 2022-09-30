@@ -69,10 +69,10 @@
 
 <h4 align="center">Alunos</h4>
 
-Listar Alunos 
+- Listar Alunos 
   <p> Rota:http://localhost:8080/alunos/todos </p>
   <p> Método: GET </p>
-  <p align="center"><img src="/readme/listarAlunos.JPG" width=650/></p>
+  <p align="center"><img src="/readme/listarAlunos.JPG"/></p>
 
 
 <p align="center">Empresas</p>
