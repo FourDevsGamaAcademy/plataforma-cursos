@@ -18,7 +18,7 @@
 <h3>Valores: </h3>
 <p align="justify">Ética; Transparência (clareza nas relações); Inovação; Respeito.</p>
 
-<h2 align="center" > Documentação do Projeto </h3>
+<h2 align="center" > Documentação do Projeto </h2>
 
 <h4> Tecnologias, Metodologias e Soluções Utilizadas </h4>
 
@@ -47,6 +47,7 @@
 * Infraestrutura 
     - AWS
         - Redis;
+        - Beanstalk;
         - Lambda;
         - EC2;
         - Bucket S3.
@@ -57,7 +58,25 @@
 * Documentação
     - Swagger.
 
-<h2 align="center" > Consumindo a API </h3>
+<h2 align="center" > Consumindo a API </h2>
+
+* Pré-Requisitos:
+    - Clonar repositório;
+    - Instalar dependências;
+    - Fazer o build do projeto;
+    - Configurar conexão com banco de dados;
+    - Configurar endpoints no postman.
+
+<p align="center">Alunos</p>
+
+- Listar Alunos 
+  Rota:http://localhost:8080/alunos/todos
+  Método: GET
+  <img src="/readme/listarAlunos.JPG" width=550 alt="Listar Alunos"/>
+
+
+<p align="center">Empresas</p>
+<p align="center">Cursos</p>
 
 <h2 align="center"> Desenvolvedoras </h2>
 <p align="justify">Aryane Maria Valentim Teixeira;</p>
