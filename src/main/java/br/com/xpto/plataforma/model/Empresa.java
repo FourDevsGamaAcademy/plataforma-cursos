@@ -14,7 +14,7 @@ public class Empresa {
     @Column(name = "nome", length = 70, nullable = false)
     private String nome;
 
-    @Column(name = "cnpj", length = 15, nullable = false, unique = true)
+    @Column(name = "cnpj", length = 18, nullable = false, unique = true)
     private String cnpj;
 
     @Column(name = "endereco", length = 120, nullable = false)
