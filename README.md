@@ -88,6 +88,22 @@
   <p> Método: PUT </p>
   <p align="center"><img src="/readme/atualizarAlunos.JPG"/></p>
 
+  <p> </p>
+
+- Deletar Alunos 
+  <p> Rota:http://localhost:8080/alunos/{id} </p>
+  <p> Método: DELETE </p>
+  <p align="center"><img src=""/></p>
+
+  <p> </p>
+
+- Buscar Alunos por CPF
+  <p> Rota:http://localhost:8080/alunos</p>
+  <p> Método: GET </p>
+  <p align="center"><img src="/readme/buscarAlunosPorCPF.JPG"/></p>
+
+  
+
 
 <p align="center">Empresas</p>
 <p align="center">Cursos</p>
