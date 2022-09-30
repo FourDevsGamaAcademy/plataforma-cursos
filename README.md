@@ -74,6 +74,20 @@
   <p> Método: GET </p>
   <p align="center"><img src="/readme/listarAlunos.JPG"/></p>
 
+<p> </p>
+
+- Cadastrar Alunos 
+  <p> Rota:http://localhost:8080/alunos </p>
+  <p> Método: POST </p>
+  <p align="center"><img src="/readme/cadastrarAlunos.JPG"/></p>
+
+<p> </p>
+
+- Atualizar Alunos 
+  <p> Rota:http://localhost:8080/alunos/{id} </p>
+  <p> Método: PUT </p>
+  <p align="center"><img src="/readme/atualizarAlunos.JPG"/></p>
+
 
 <p align="center">Empresas</p>
 <p align="center">Cursos</p>
