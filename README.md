@@ -70,153 +70,153 @@
 <h4 align="center">Alunos</h4>
 
 - Listar Alunos 
-  <p> Rota:http://localhost:8080/alunos/todos </p>
-  <p> Método: GET </p>
-  <p align="center"><img src="/readme/listarAlunos.JPG"/></p>
+<p> Rota:http://localhost:8080/alunos/todos </p>
+<p> Método: GET </p>
+<p align="center"><img src="/readme/listarAlunos.JPG"/></p>
 
 <p> </p>
 
 - Cadastrar Alunos 
-  <p> Rota:http://localhost:8080/alunos </p>
-  <p> Método: POST </p>
-  <p align="center"><img src="/readme/cadastrarAlunos.JPG"/></p>
+<p> Rota:http://localhost:8080/alunos </p>
+<p> Método: POST </p>
+<p align="center"><img src="/readme/cadastrarAlunos.JPG"/></p>
 
 <p> </p>
 
 - Atualizar Alunos 
-  <p> Rota:http://localhost:8080/alunos/{id} </p>
-  <p> Método: PUT </p>
-  <p align="center"><img src="/readme/atualizarAlunos.JPG"/></p>
+<p> Rota:http://localhost:8080/alunos/{id} </p>
+<p> Método: PUT </p>
+<p align="center"><img src="/readme/atualizarAlunos.JPG"/></p>
 
-  <p> </p>
+<p> </p>
 
 - Deletar Alunos 
-  <p> Rota:http://localhost:8080/alunos/{id} </p>
-  <p> Método: DELETE </p>
+<p> Rota:http://localhost:8080/alunos/{id} </p>
+<p> Método: DELETE </p>
  
-  <p> </p>
+<p> </p>
 
 - Buscar Alunos por CPF
-  <p> Rota:http://localhost:8080/alunos</p>
-  <p> Método: GET </p>
-  <p align="center"><img src="/readme/buscarAlunosPorCPF.JPG"/></p>
+<p> Rota:http://localhost:8080/alunos</p>
+<p> Método: GET </p>
+<p align="center"><img src="/readme/buscarAlunosPorCPF.JPG"/></p>
 
 - Buscar Alunos por ID
-  <p> Rota:http://localhost:8080/alunos/{id}</p>
-  <p> Método: GET </p>
-  <p align="center"><img src="/readme/bucarAlunosPorID.JPG"/></p>
+<p> Rota:http://localhost:8080/alunos/{id}</p>
+<p> Método: GET </p>
+<p align="center"><img src="/readme/bucarAlunosPorID.JPG"/></p>
 
-  <p> </p>
+<p> </p>
 
 <h4 align="center">Empresas</h4>
 
 - Listar Empresas
- <p> Rota:http://localhost:8080/empresas/todos </p>
- <p> Método: GET </p>
- <p align="center"><img src="/readme/listarEmpresas.JPG"/></p>
+<p> Rota:http://localhost:8080/empresas/todos </p>
+<p> Método: GET </p>
+<p align="center"><img src="/readme/listarEmpresas.JPG"/></p>
 
-  <p> </p>
+<p> </p>
 
 - Cadastrar Empresas
- <p> Rota:http://localhost:8080/empresas </p>
- <p> Método: POST </p>
- <p align="center"><img src="/readme/cadastrarEmpresas.JPG"/></p>
+<p> Rota:http://localhost:8080/empresas </p>
+<p> Método: POST </p>
+<p align="center"><img src="/readme/cadastrarEmpresas.JPG"/></p>
 
-  <p> </p>
+<p> </p>
 
 - Atualizar Empresas
- <p> Rota:http://localhost:8080/empresas/{id} </p>
- <p> Método: PUT </p>
- <p align="center"><img src="/readme/atualizarEmpresas.JPG"/></p>
+<p> Rota:http://localhost:8080/empresas/{id} </p>
+<p> Método: PUT </p>
+<p align="center"><img src="/readme/atualizarEmpresas.JPG"/></p>
 
-  <p> </p>
+<p> </p>
 
 - Deletar Empresas
- <p> Rota:http://localhost:8080/empresas/{id} </p>
- <p> Método: DELETE </p>
- <p align="center"><img src="/readme/deletarEmpresa.JPG"/></p>
+<p> Rota:http://localhost:8080/empresas/{id} </p>
+<p> Método: DELETE </p>
+<p align="center"><img src="/readme/deletarEmpresa.JPG"/></p>
 
- <p> </p>
+<p> </p>
 
 - Buscar Empresas por ID
- <p> Rota:http://localhost:8080/empresas/{id} </p>
- <p> Método: GET </p>
- <p align="center"><img src="/readme/buscarEmpresasPorID.JPG"/></p>
+<p> Rota:http://localhost:8080/empresas/{id} </p>
+<p> Método: GET </p>
+<p align="center"><img src="/readme/buscarEmpresasPorID.JPG"/></p>
 
 
 <h4 align="center">Cursos</h4>
 
 - Listar Cursos 
-  <p> Rota:http://localhost:8080/cursos/todos </p>
-  <p> Método: GET </p>
-  <p align="center"><img src="/readme/listarCursos.JPG"/></p>
+<p> Rota:http://localhost:8080/cursos/todos </p>
+<p> Método: GET </p>
+<p align="center"><img src="/readme/listarCursos.JPG"/></p>
   
 <p> </p>
 
 - Cadastrar Cursos 
-  <p> Rota:http://localhost:8080/cursos </p>
-  <p> Método: POST </p>
-  <p align="center"><img src="/readme/cadastrarCurso.JPG"/></p>
+<p> Rota:http://localhost:8080/cursos </p>
+<p> Método: POST </p>
+<p align="center"><img src="/readme/cadastrarCurso.JPG"/></p>
 
 <p> </p>
 
 - Atualizar Cursos 
-  <p> Rota:http://localhost:8080/cursos/{id} </p>
-  <p> Método: PUT </p>
-  <p align="center"><img src="/readme/atualizarCursos.JPG"/></p>
+<p> Rota:http://localhost:8080/cursos/{id} </p>
+<p> Método: PUT </p>
+<p align="center"><img src="/readme/atualizarCursos.JPG"/></p>
  
-  <p> </p>
+<p> </p>
 
 - Deletar Cursos 
-  <p> Rota:http://localhost:8080/cursos/{id} </p>
-  <p> Método: DELETE </p>
-  <p align="center"><img src="/readme/deletarCursos.JPG"/></p>
+<p> Rota:http://localhost:8080/cursos/{id} </p>
+<p> Método: DELETE </p>
+<p align="center"><img src="/readme/deletarCursos.JPG"/></p>
  
-  <p> </p>
+<p> </p>
 
 - Buscar Cursos por ID
-  <p> Rota:http://localhost:8080/cursos/{id}</p>
-  <p> Método: GET </p>
-  <p align="center"><img src="/readme/buscarCursosPorID.JPG"/></p>
+<p> Rota:http://localhost:8080/cursos/{id}</p>
+<p> Método: GET </p>
+<p align="center"><img src="/readme/buscarCursosPorID.JPG"/></p>
 
- <p> </p>
+<p> </p>
 
- <h4 align="center">Inscrições</h4>
+<h4 align="center">Inscrições</h4>
 
 - Listar Inscrições 
-  <p> Rota: http://localhost:8080/inscricoes/todos </p>
-  <p> Método: GET </p>
-  <p align="center"><img src="/readme/listarInscricoes.JPG"/></p>
+<p> Rota: http://localhost:8080/inscricoes/todos </p>
+<p> Método: GET </p>
+<p align="center"><img src="/readme/listarInscricoes.JPG"/></p>
   
 <p> </p>
 
 - Cadastrar Inscrições 
-  <p> Rota: http://localhost:8080/inscricoes </p>
-  <p> Método: POST </p>
-  <p align="center"><img src="/readme/cadastrarInscricoes.JPG"/></p>
+<p> Rota: http://localhost:8080/inscricoes </p>
+<p> Método: POST </p>
+<p align="center"><img src="/readme/cadastrarInscricoes.JPG"/></p>
 
 <p> </p>
 
 - Atualizar Inscrições 
-  <p> Rota:http://localhost:8080/inscricoes/{id} </p>
-  <p> Método: PUT </p>
-  <p align="center"><img src="/readme/atualizarInscricoes.JPG"/></p>
+<p> Rota:http://localhost:8080/inscricoes/{id} </p>
+<p> Método: PUT </p>
+<p align="center"><img src="/readme/atualizarInscricoes.JPG"/></p>
  
-  <p> </p>
+<p> </p>
 
 - Deletar Inscrições 
-  <p> Rota:http://localhost:8080/inscricoes/{id} </p>
-  <p> Método: DELETE </p>
-  <p align="center"><img src="/readme/deletarInscricoes.JPG"/></p>
+<p> Rota:http://localhost:8080/inscricoes/{id} </p>
+<p> Método: DELETE </p>
+<p align="center"><img src="/readme/deletarInscricoes.JPG"/></p>
 
-  <p> </p>
+<p> </p>
 
 - Buscar Inscricoes por ID
-  <p> Rota:http://localhost:8080/inscricoes/{id}</p>
-  <p> Método: GET </p>
-  <p align="center"><img src="/readme/buscarInscricoesPorID.JPG"/></p>
+<p> Rota:http://localhost:8080/inscricoes/{id}</p>
+<p> Método: GET </p>
+<p align="center"><img src="/readme/buscarInscricoesPorID.JPG"/></p>
 
- <p> </p>
+<p> </p>
 
 <h2 align="center"> Desenvolvedoras </h2>
 <p align="justify">Aryane Maria Valentim Teixeira;</p>
