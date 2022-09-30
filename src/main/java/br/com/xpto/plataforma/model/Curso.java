@@ -56,12 +56,12 @@ public class Curso {
         return empresa.getNome();
     }
 
-    public Empresa getEmpresaId() {
-        return empresa;
-    }
-
     public void setEmpresa(Empresa empresa) {
         this.empresa = empresa;
+    }
+
+    public Empresa getEmpresaId() {
+        return empresa;
     }
 
     public String getDescricao() {
