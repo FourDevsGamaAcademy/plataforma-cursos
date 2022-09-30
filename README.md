@@ -1,7 +1,7 @@
 <h1 align="center"> CRAVO&CANELA - Squad 4DEVS (FourDevs) </h1>
 
 <p align="center">
-<img src="/readme/logo5.JPG" width=225 alt="Logo Cravo&Canela"/>
+<img src="/readme/logocravo.png" width=225 alt="Logo Cravo&Canela"/>
 </p>
 
 > Status do Projeto: Concluido :heavy_check_mark:
