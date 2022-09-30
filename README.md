@@ -177,39 +177,44 @@
   - Buscar Cursos por ID
   <p> Rota:http://localhost:8080/cursos/{id}</p>
   <p> Método: GET </p>
-   <p align="center"><img src="/readme/buscarCursosPorID.JPG"/></p>
+  <p align="center"><img src="/readme/buscarCursosPorID.JPG"/></p>
 
  <p> </p>
 
  <h4 align="center">Inscrições</h4>
 
  - Listar Inscrições 
-  <p> Rota:http://localhost:8080/inscricoes/todos </p>
+  <p> Rota: http://localhost:8080/inscricoes/todos </p>
   <p> Método: GET </p>
+  <p align="center"><img src="/readme/listarInscricoes.JPG"/></p>
   
 <p> </p>
 
 - Cadastrar Inscrições 
-  <p> Rota:http://localhost:8080/inscricoes </p>
+  <p> Rota: http://localhost:8080/inscricoes </p>
   <p> Método: POST </p>
+  <p align="center"><img src="/readme/cadastrarInscricoes.JPG"/></p>
 
 <p> </p>
 
 - Atualizar Inscrições 
   <p> Rota:http://localhost:8080/inscricoes/{id} </p>
   <p> Método: PUT </p>
+  <p align="center"><img src="/readme/atualizarInscricoes.JPG"/></p>
  
   <p> </p>
 
 - Deletar Inscrições 
   <p> Rota:http://localhost:8080/inscricoes/{id} </p>
   <p> Método: DELETE </p>
+  <p align="center"><img src="/readme/deletarInscricoes.JPG"/></p>
 
   <p> </p>
 
   - Buscar Inscricoes por ID
   <p> Rota:http://localhost:8080/inscricoes/{id}</p>
   <p> Método: GET </p>
+  <p align="center"><img src="/readme/buscarInscricoesPorID.JPG"/></p>
 
  <p> </p>
 
