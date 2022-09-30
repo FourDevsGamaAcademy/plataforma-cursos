@@ -67,12 +67,12 @@
     - Configurar conexão com banco de dados;
     - Configurar endpoints no postman.
 
-<h5 align="center">Alunos</h5>
+<h4 align="center">Alunos</h4>
 
 - Listar Alunos 
   Rota:http://localhost:8080/alunos/todos
   Método: GET
-  <img src="/readme/listarAlunos.JPG" width=800/>
+  <p><img src="/readme/listarAlunos.JPG" width=650/></p>
 
 
 <p align="center">Empresas</p>
