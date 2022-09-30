@@ -107,12 +107,44 @@
   <p> Método: GET </p>
   <p align="center"><img src="/readme/bucarAlunosPorID.JPG"/></p>
 
+ <p> </p>
+
+<h4 align="center">Empresas</h4>
+
+- Listar Empresas
+ <p> Rota:http://localhost:8080/empresas/todos </p>
+ <p> Método: GET </p>
+ <p align="center"><img src="/readme/listarEmpresas.JPG"/></p>
+
+  <p> </p>
+
+ - Cadastrar Empresas
+ <p> Rota:http://localhost:8080/empresas </p>
+ <p> Método: POST </p>
+ <p align="center"><img src="/readme/cadastrarEmpresas.JPG"/></p>
+
+  <p> </p>
+
+ - Atualizar Empresas
+ <p> Rota:http://localhost:8080/empresas/{id} </p>
+ <p> Método: PUT </p>
+ <p align="center"><img src="/readme/atualizarEmpresas.JPG"/></p>
+
+  <p> </p>
+
+ - Deletar Empresas
+ <p> Rota:http://localhost:8080/empresas/{id} </p>
+ <p> Método: DELETE </p>
+ <p align="center"><img src="/readme/deletarEmpresa.JPG"/></p>
+
+ <p> </p>
+
+- Buscar Empresas por ID
+ <p> Rota:http://localhost:8080/empresas/{id} </p>
+ <p> Método: GET </p>
+ <p align="center"><img src="/readme/buscarEmpresasPorID.JPG"/></p>
 
 
-  
-
-
-<p align="center">Empresas</p>
 <p align="center">Cursos</p>
 
 <h2 align="center"> Desenvolvedoras </h2>
