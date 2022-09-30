@@ -177,6 +177,7 @@
   - Buscar Cursos por ID
   <p> Rota:http://localhost:8080/cursos/{id}</p>
   <p> Método: GET </p>
+   <p align="center"><img src="/readme/buscarCursosPorID.JPG"/></p>
 
  <p> </p>
 
