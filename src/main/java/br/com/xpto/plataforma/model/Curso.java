@@ -1,5 +1,7 @@
 package br.com.xpto.plataforma.model;
 
+import com.fasterxml.jackson.annotation.JsonIgnore;
+
 import javax.persistence.*;
 import java.time.LocalDate;
 
@@ -52,7 +54,8 @@ public class Curso {
         this.cargaHoraria = cargaHoraria;
     }
 
-    public String getEmpresa() {
+    @JsonIgnore
+    public String getEmpresaNome() {
         return empresa.getNome();
     }
 
@@ -60,7 +63,7 @@ public class Curso {
         this.empresa = empresa;
     }
 
-    public Empresa getEmpresaId() {
+    public Empresa getEmpresa() {
         return empresa;
     }
 
